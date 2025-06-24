@@ -1,0 +1,65 @@
+#related-line {
+    position: relative;
+    width: 100%;
+}
+.related-box-item {
+    width: 100%;
+    background-color: brown;
+    height: 80px;
+    border-radius: 8px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: auto;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+}
+.related-box-foto {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    background-color: burlywood;
+}
+.related-box-flyout {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    right: 0;
+    left: 80px;
+    background-color: #e74c3c;
+    backdrop-filter: blur(5px);
+    opacity: 0.7;
+    transition: 0.7s;
+    overflow: hidden;
+    
+}
+.related-box-item:hover .related-box-flyout {
+    left: 0;
+}
+.related-box-item:hover .rel-x {
+    right: 40px;
+    left: 40px;
+    
+}
+.rel-x {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transition: 0.7s;
+    /*background-color: blueviolet;*/
+}
+.center-text-x {
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 90%;
+    margin-left: 5%;
+}

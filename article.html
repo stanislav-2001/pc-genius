@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <?php include 'adminka_bcg.php'; ?>
+        <?php include 'load_cats.php'; ?>
+        <?php include 'injector.php'?>
+        <?php 
+            $obj = json_decode($_POST['objstring'], true);
+            file_put_contents("article.txt",$obj["nadpis"]);
+        ?>
+        <title>PCGENIUS</title>
+        <link href="https://fonts.googleapis.com/css?family=Public+Sans:300,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+        <link href="index.css" rel="stylesheet" type="text/css">
+        <link href="article.css" rel="stylesheet" type="text/css">
+        <script src="https://kit.fontawesome.com/e1ab4aab0c.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <!--<nav id="mnav">
+            <h1>PC Genius</h1>
+        </nav>-->
+        <main id="body">
+            <div id="titul">
+                <h1>PC Genius</h1>
+                <p>A brand new computer blog</p>
+            </div>
+            
+            <section id="sleft">
+                <div class="fill">
+                    <div id="headbox">
+                        <div id="headbox-overlay-fake"></div>
+                        <div id="headbox-overlay">
+                            <div class="rel">
+                                <div class="center-text"><h1>Priemerne dlhý názov je asi takto dlhý</h1></div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div id="owned-html">
+
+                </div>
+                <div id="disqus_thread"></div>
+                <script>
+
+                /**
+                *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                /*
+                var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                };
+                */
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://pc-genius.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
+            </section>
+            
+            <aside id="sright">
+                <div class="fill">
+                    <section id="navigation">
+                        <h3 class="sectionheader right art-h3">Navigation</h3>
+                        <nav id="navright" class="relvyp">
+                            <div class="navitemwrapper">
+                                <div class="navitem">
+                                    <div class="navitemoverlay"></div>
+                                    <div class="navitemtext">Faskuska</div>
+                                </div>
+                                <div class="navitem">
+                                    <div class="navitemoverlay"></div>
+                                    <div class="navitemtext">Jeden</div>
+                                </div>
+                                <div class="navitem">
+                                    <div class="navitemoverlay"></div>
+                                    <div class="navitemtext">Dva</div>
+                                </div>
+                                <div class="navitem">
+                                    <div class="navitemoverlay"></div>
+                                    <div class="navitemtext">Dva</div>
+                                </div>
+                            </div>
+                            <div class="navitemfill"></div>
+                        </nav>
+                    </section>
+                    <section id="newsletter">
+                        <h3 class="sectionheader">Newsletter</h3>
+                        <div>
+                            <div class="relvyp">
+                                <div class="italic">Sign up for a free newsletter: get an email everytime when a new article is on.
+                                    <div id="newslettermsgs"></div>
+                                </div>
+                                <input id="newsinput" type="email" placeholder="e.g. blahblah@blah.blah">
+                                <div class="navitem" style="margin-top: 8px" onclick="send()">
+                                    <div class="navitemoverlay"></div>
+                                    <div class="transp"></div>
+                                    <div class="navitemtext">Sign up!</div>
+                                </div>
+                                <div class="transp"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="related-arts-section">
+                        <h3 class="sectionheader">Related articles</h3>
+                        <div>
+                            <?php echo $basic; ?>
+                        </div>
+                    </section>
+                </div>
+            </aside>
+        </main>
+        <script src="index.js"></script>
+        <script> </script>
+    </body>
+</html>
