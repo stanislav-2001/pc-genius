@@ -17,9 +17,9 @@ This is my hobby project that should represent a blog website for tech-related n
 In order to run the website you need to run it on a working PHP server (for version, it should run even on older ones), that has GD and mysqli extensions activated in the `php.ini` config file.
 In `config.php` then set default url. It is set to port 8080 on default.
 
-Next, you should have MySQL server installed with an user and a database. You can set the credentials in `\db.php` AND \sql\db.php` (file unification is TODO atm). The database should be manually created at first.
+Next, you should have MySQL server installed with an user and a database. You can set the credentials in `\db.php` AND `\sql\db.php` (file unification is TODO atm). The database should be manually created at first.
 
-Once you have this set up, you need to navigate to `/install.php` in browser to create all the necessary MySQL tables for you. In production, this file should be deleted afterwards.
+Once you have this set up, you need to navigate to `/sql/install.php` in browser to create all the necessary MySQL tables for you. In production, this file should be deleted afterwards.
 
 The repo also contains .htaccess file that must be enabled on the server in order to make links work (it prettifies article urls and sets 404 page).
 
