@@ -60,6 +60,14 @@
                 }
                 $pocitadlo++;
             }
+
+            for($i = count($clanky); $i < 3; $i++) {
+                $clanky[] = array(
+                    "url" => "empty",
+                    "obr_semiurl" => "https://pcgenius.xyz/img/empty.png",
+                    "nazov" => "Placeholder pre článok #" . ($i + 1)
+                );
+            }
         ?>
         <main id="body">
             <div id="fb-root"></div>

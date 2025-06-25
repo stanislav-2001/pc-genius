@@ -23,6 +23,8 @@ Once you have this set up, you need to navigate to `/install.php` in browser to 
 
 The repo also contains .htaccess file that must be enabled on the server in order to make links work (it prettifies article urls and sets 404 page).
 
+For the newsletter function it is necessary to set the SMTP server settings in `php.ini` and edit the `from` header in the `sendmails.php` to correspond to your email.
+
 ## Administration
 
 The app contains a hidden administration accessible at the link `/adminka/adminka.php?pass=<PASS>` where PASS is, for now, a SHA1 hash of the admin password. Currently, the password is hard-coded and you can get the hash at `\pas.php`. This is a temporary solution,
